@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<section>
+	<div class="container">
+		<div class="card">
+			<div class="cardbody my-5">	
+			
+			<div class="text-center font-italic">
+			<h1 class="text-center mt-3 text-secondary font-italic font-weight-light"> Start Booking Your Appointment ...</h1>
+		
+			<a th:href="@{/patient/book-appointment}" class="btn btn-primary btn-block text-uppercase mt-4 "> Book New Appointment</a>
+			</div>
+		
+					</div>
+		</div>
+	
+	</div>
+
+	</section>
+</body>
+</html>

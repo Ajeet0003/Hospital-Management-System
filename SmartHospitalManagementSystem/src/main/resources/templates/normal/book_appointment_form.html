@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+ th:replace="normal/base::layout(~{::section})">
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<section>
+	<!-- 	<h1> this is private appointment page</h1> -->
+	
+	
+<!------ Include the above in your HEAD tag ---------->
+
+ <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="well-block">
+                        <div class="well-title">
+                            <h2>Book an Appointment</h2>
+                        </div>
+                        <form action="#" th:object="${appointment}" 
+                        method="POST" 
+                        th:action="@{/patient/process-appointment}">
+                            <!-- Form start -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <input  id="name" name="name" required type="text" placeholder="Name" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input  id="email" name="email"  required type="text" placeholder="E-Mail" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                
+                                <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="date">Appointment Date </label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                    </div>
+                                
+                                
+                               <!--  <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="date">Preferred Date</label>
+                                        <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
+                                    </div>
+                                </div> -->
+                                <!-- Select Basic -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="time">Preferred Time</label>
+                                        <select id="time" name="time" class="form-control">
+                                            <option value="8:00 to 9:00">8:00 to 9:00</option>
+                                            <option value="9:00 to 10:00">9:00 to 10:00</option>
+                                            <option value="10:00 to 1:00">10:00 to 1:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Select Basic -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="appointmentfor">Appointment For</label>
+                                        <select id="appointmentFor" name="appointmentfor" class="form-control">
+                                             <option value="Select" >Select</option>
+                                            <option value="Skin Disorders">Skin Disorders</option>
+                                            <option value="Joint Pain And Osteoarthritis">Joint Pain And Osteoarthritis</option>
+                                            <option value="Back Problems">Back Problems</option>
+                                            <option value="Cholesterol Problems">Cholesterol Problems</option>
+                                            <option value="Upper Respiratory Problems (Not Including Asthma)">Upper Respiratory Problems (Not Including Asthma)</option>
+                                            <option value="Anxiety, Bipolar Disorder And Depression">Anxiety, Bipolar Disorder And Depression</option>
+                                            <option value="Chronic Neurology Disorders">Chronic Neurology Disorders</option>
+                                            <option value="High Blood Pressure">High Blood Pressure</option>
+                                           <option value="Headaches And Migraines">Headaches And Migraines</option>
+                                            <option value="Diabetes">Diabetes</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="row"> -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="symptoms">Tell Us About Your Problems:</label>
+                            <textarea id="mytextarea" name="tellproblem" cols="2" rows="2"  class="form-control" placeholder="Tell us about problems you are facing"></textarea>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                                
+                                <!-- Button -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                   <!--  <div class="container text-center mt-3">
+ 										<button type="submit" class="btn bg-primary text-white"> Submit</button> 
+                                     </div> -->
+                                        <button id="singlebutton" name="singlebutton"  class=" make ">Make An Appointment</button>
+                                 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- form end -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well-block">
+                        <div class="well-title">
+                            <h2>Why Appointment with Us</h2>
+                        </div>
+                        <div class="feature-block">
+                            <div class="feature feature-blurb-text">
+                                <h4 class="feature-title">24/7 Hours Available</h4>
+                                <div class="feature-content">
+                                    <p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
+                                </div>
+                            </div>
+                            <div class="feature feature-blurb-text">
+                                <h4 class="feature-title">Experienced Staff Available</h4>
+                                <div class="feature-content">
+                                    <p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
+                                </div>
+                            </div>
+                            <div class="feature feature-blurb-text">
+                                <h4 class="feature-title">Low Price & Fees</h4>
+                                <div class="feature-content">
+                                    <p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script> -->
+	
+	</section>
+</body>
+</html>

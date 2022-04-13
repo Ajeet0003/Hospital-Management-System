@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<section>
+		<div class="card  mr-5 ml-5">
+		<div class="card-body">	
+		
+		<h1 class="text-center">Your Appointment</h1>
+		
+		<!-- search -->
+		
+		<!-- <div class="search-container my-4">
+		<input onkeyup="search()" id="search-input" type="text" class="form-control" placeholder="search your appointments" />
+		<div class="search-result">
+		
+		result goes here
+		</div>
+	
+		</div> -->
+		
+		
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date</th>
+       <th scope="col">Time</th>
+        <th scope="col">Action</th>
+        
+    </tr>
+  </thead>
+  <tbody>
+   
+
+   
+    <tr th:each="c:${appointments}">
+      <th scope="row" th:text="${'HMSPATIENT'+c.cId}">1</th>
+      <td th:text="${c.name}">Larry</td>
+      <td th:text="${c.email}">the Bird</td>
+      <td th:text="${c.date}">@twitter</td>
+      <td th:text="${c.time}">the Bird</td>
+      <td>
+      	
+      	<!-- <a href="#" th:onclick="|deleteAppointment(${c.aId})|"  class="btn btn-danger btn-sm">Delete</a> 
+      	 -->
+      	 <!-- 	<a th:href="@{'/patient/delete/'+${c.aId}}" class="btn btn-primary btn-sm">Delete</a>
+      	 	 -->
+      	  <a href="#" th:onclick="|deleteAppointment(${c.cId})|"  class="btn btn-danger btn-sm">Delete</a> 
+      	 	<!-- <form method="post" th:onclick="|deleteAppointment(${c.aId})|" >
+      	
+      	<button type="submit" class="btn btn-primary btn-sm">Delete</button>
+      
+      </form> -->
+      	<!-- <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+      	 --><!-- <button type="submit" class="btn btn-primary btn-sm">Update</button>
+      	 -->
+      	 <form method="post" th:action="@{'/patient/update-appointment/'+${c.cId}}" class="mt-2">
+      	
+      	<button type="submit" class="btn btn-primary btn-sm">Update</button>
+      
+      </form> 
+      
+      </td>
+    </tr>
+  </tbody>
+</table>
+		</div>
+		
+		
+		</div>
+	</section>
+</body>
+</html>

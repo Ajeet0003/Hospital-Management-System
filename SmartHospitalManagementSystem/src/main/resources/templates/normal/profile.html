@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<section >
+	
+	
+	
+	
+		<!-- <div class="container">-->
+		<div class="contaner">
+	
+	<div class="card ">	
+	
+	<div class="cardbody ">
+	<!-- <img src="" style="height:200px;width:200px;"class="my_profile_picture" th:src="@{'/img/'+$appointment.image}}" alt="profile photo"/>
+	 -->
+	<h1 class="text-center" th:text="${patient.name}"></h1>
+		
+		<table class="table">
+  <thead>
+     <tr>
+      <th scope="col">#PATIENTID</th>
+        <th scope="col">HMSPATIENT<span th:text="${patient.patientId}"></span></th>
+       
+       </tr>
+  </thead>
+  <tbody>
+       
+       <tr>
+      <th scope="row">Email</th>
+       <td ><span th:text="${patient.email}"></span></td>
+       </tr>
+       
+        <tr>
+      <th scope="row">Contact Number</th>
+       <td ><span th:text="${patient.contactNo}"></span></td>
+       </tr>
+       
+       <tr>
+      <th scope="row">Age</th>
+       <td ><span th:text="${patient.age}"></span></td>
+       </tr>
+       <tr>
+      <th scope="row">Gender</th>
+       <td ><span th:text="${patient.gender}"></span></td>
+       </tr>
+       <tr>
+      <th scope="row">Blood Group</th>
+       <td ><span th:text="${patient.bloodGroup}"></span></td>
+       </tr>
+       <tr>
+      <th scope="row">Contact Number</th>
+       <td ><span th:text="${patient.contactNo}"></span></td>
+       </tr>
+       <tr>
+      <th scope="row">Address</th>
+       <td ><span th:text="${patient.address}"></span></td>
+       </tr>
+       <tr>
+      <th scope="row">Any Major Disease Suffered Earlier</th>
+       <td ><span th:text="${patient.anyMajorDiseaseEarlier}"></span></td>
+       </tr>
+       
+       
+       
+       <tr>
+      <th scope="row">Role</th>
+       <td ><span th:text="${patient.role}"></span></td>
+       </tr>
+       
+       <tr>
+      <th scope="row">Account Active</th>
+       <td ><span th:text="${patient.enabled}"></span></td>
+       </tr>
+       
+       
+    
+		
+		
+		</table> 
+		</div>
+		</div>
+	
+		</div>
+	
+	</section>
+</body>
+</html>

@@ -10,3 +10,6 @@ cat <put address where key generate>
 //tail <path to id_rsa.pub> # Add this key to your GitHub account
 git remote add orign <ssh url.git>
 git push origin master
+
+
+i->initial commit->esc->:wq->
